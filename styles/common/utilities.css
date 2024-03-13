@@ -1,0 +1,47 @@
+.font{
+    font-family: "Jura", sans-serif;
+}
+
+.full-h{
+    height: 100%;
+}
+
+.full-w{
+    width: 100%;
+}
+
+.half-h{
+    height: 50%;
+}
+
+.half-w{
+    width: 50%;
+}
+
+.image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.gap{
+    gap:20px
+}
+

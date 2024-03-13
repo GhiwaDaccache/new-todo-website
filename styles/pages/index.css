@@ -1,0 +1,31 @@
+/* CSS reset  */
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;    
+    font-family: "Poppins", sans-serif;
+    border: none;
+}
+
+header{
+    height: 200px;
+    padding: 30px;
+    background-image: url('../../assets/banner-eisenhower-matrix.png');
+    justify-content: end;
+}
+
+header > button{
+    align-self: end;
+}
+
+h1{
+    font-family: "Jura", sans-serif;
+    color: #2d2585;
+    font-size: 56px;
+    padding-top: 10px ;
+}
+
+.card{
+    
+}
+
