@@ -7,6 +7,10 @@
     border: none;
 }
 
+body{
+    background-color: #2d258528;
+}
+
 header{
     height: 200px;
     padding: 30px;
@@ -20,12 +24,32 @@ header > button{
 
 h1{
     font-family: "Jura", sans-serif;
-    color: #2d2585;
     font-size: 56px;
-    padding-top: 10px ;
+    padding: 30px ;
 }
 
 .card{
-    
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #716e8a;
+    min-width: 350px;
+    padding: 10px;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.card input{
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    min-height: 30px;
+    border-color: #716e8a;
+    width: 70%;
+}
+
+.card div{
+   justify-content: space-between;
+   padding: 0px 10px;
 }
 

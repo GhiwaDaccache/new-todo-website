@@ -1,4 +1,4 @@
-.button{
+.btn{
     background-color: #2d2585;
     padding: 15px 32px;
     text-align: center;
@@ -8,4 +8,9 @@
     color: white;
     font-family: "Jura", sans-serif;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 0.95;
 }

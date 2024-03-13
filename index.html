@@ -26,17 +26,31 @@
 <body>
     <header class="flex">
         <nav>
-            <button class="button"> Login </button>
+            <button class="btn"> Login </button>
         </nav>
     </header>
 
-    <section class="flex column center">
-            <h1>Welcome to Tick-it</h1>
-            <div class="card">
-                <h4></h4>
-                <input type="text">
-                <input type="text">
-                <input type="text">
+    <section class="flex column center ">
+            <h1 class="primary-text">Welcome to Tick-it</h1>
+            <div class="card shadow flex column align-center white-bg">
+                <h4>Let's get started</h4>
+
+                <div class="flex full-w">
+                    <label for="email-input">Email</label>
+                    <input type="text" id="email" name="email-input" placeholder="Email">
+                </div>  
+
+                <div class="flex full-w">
+                    <label for="username-input">Username</label>
+                    <input type="text" id="username" name="username-input" placeholder="Username">
+                </div> 
+
+                <div class="flex full-w">
+                    <label for="password-input">Email</label>
+                    <input type="password" id="email" name="password-input" placeholder="Password">
+                </div> 
+
+                <button class="btn"> Sign up </button>
             </div>
     </section>
 
