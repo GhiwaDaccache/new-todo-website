@@ -1,0 +1,62 @@
+.test{
+    background-color: bisque;
+}
+
+.cards-container{
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.score{
+    text-align: center;
+    padding: 20px
+}
+
+.cards-container > div{
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #716e8a;
+    min-width: 350px;
+    padding: 10px 20px;
+    height: 300px;
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+.cards-container p{
+    padding-left: 20px;
+}
+
+.card-header{
+    padding: 3px 0px;
+    border-radius: 20px;
+    width: 90%;
+}
+
+.card-footer{
+    border-radius: 20px;
+    min-height: 40px;
+    min-width: 100px;
+    position: sticky;
+    padding-bottom: 5px;
+    bottom: 0; 
+    justify-content: space-around;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+    height: auto; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; 
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+        background: #7d7d7d; 
+        border-radius: 20px;
+
+}
