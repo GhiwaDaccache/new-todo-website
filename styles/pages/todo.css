@@ -36,13 +36,39 @@
 }
 
 .card-footer{
-    border-radius: 20px;
+    border-radius: 5px;
     min-height: 40px;
     min-width: 100px;
     position: sticky;
     padding-bottom: 5px;
     bottom: 0; 
     justify-content: space-around;
+}
+
+.pop-up{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #716e8a;
+    height: fit-content;  
+    min-width: 350px;
+    padding: 10px 20px;
+    gap: 10px;
+    background-color: bisque;
+
+}
+
+.pop-up input{
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    min-height: 30px;
+    border-color: #716e8a;
+    width: 70%;
 }
 
 ::-webkit-scrollbar {

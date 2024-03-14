@@ -1,16 +1,22 @@
 .btn{
     background-color: #2d2585;
-    padding: 15px 32px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     color: white;
     font-family: "Jura", sans-serif;
     border-radius: 5px;
     cursor: pointer;
+    height: 50px;
+    width: 100px;
 }
 
 .btn:hover{
     opacity: 0.95;
+}
+
+a{
+    padding: 0px;
 }
