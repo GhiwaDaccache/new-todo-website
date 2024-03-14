@@ -11,9 +11,10 @@ $check_count->bind_param('s', $email);
 $check_count->execute();
 $check_count->store_result();
 
-// $check_count = (int)$check_count;
+$check_count->bind_result($count);
+$check_count->fetch();
 
-if($check_count == 0){
+if($count == 0){
     $hashed_password = password_hash($password, PASSWORD_BCRYPT);
     $query = $mysqli->prepare('insert into users (email, username, password) values(?,?,?)');
     $query->bind_param('sss', $email, $username, $hashed_password);

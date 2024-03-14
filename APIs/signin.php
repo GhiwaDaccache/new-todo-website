@@ -4,17 +4,27 @@ include('connection.php');
 $user_input = $_POST['user_input'];
 $password = $_POST['password'];
 
-$check_count = $mysqli->prepare('select count(*) from users where email=? or username=?;');
-$check_count->bind_param('ss', $user_input, $user_input);
-$check_count->execute();
-$check_count->store_result();
+$query = $mysqli->prepare('select id, password from users where email=? or username=?;');
+$query->bind_param('ss', $user_input, $user_input);
+$query->execute();
+$query->store_result();
+$query->bind_result($id, $hashed_password);
+$query->fetch();
+$num_rows = $query->num_rows();
 
-$check_count->bind_result($count);
-$check_count->fetch();
+echo $hashed_password;
+echo $num_rows;
 
 
-if($count == 0){
-    echo 'no user found';
+if($num_rows == 0){
+    $response['status'] = "failed";
+    $response['message'] = "invalid username";
+}elseif(password_verify($password, $hashed_password)){
+    $response['status'] = "logged in";
+    $response['user_id'] = $id;
 }else{
-    echo 'succes';
+    $response['status'] = "failed";
+    $response['message'] = "wrong password";
 };
+
+echo json_encode($response);
