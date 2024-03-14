@@ -1,24 +1,30 @@
 const signUp = async (email, username, password) => {
-    console.log(email);
+    const formData = new FormData();
+        formData.append('email', email);
+        formData.append('username', username);
+        formData.append('password', password);
+
     try {
         const result = await axios.post(
             "http://localhost/new-todo-website/APIs/signup.php",
-            {
-                email: email,
-                username: username,
-                password: password,
-            },
+            formData,
             {
                 headers: {
-                "Content-Type": "application/json",
-                },
+                    "Content-Type": "multipart/form-data" 
+                }
             }
             );
-                console.log(result.data)
-        return result.data;
 
+        if (result.data.status == "success")
+        {
+            window.location.href = `../UI/pages/todo.html?user_id=${result.data.user_id}`;
+        }
+        else
+        {
+            console.log("OUT")
+        }
         } catch (error) {
-        console.log(error);
+            console.log(error);
     }
   };
   
@@ -29,6 +35,7 @@ const passwordInput = document.getElementById("password");
 const signUpBtn = document.getElementById("signup-btn");
 
 signUpBtn.addEventListener('click', () => {
-    signUp(emailInput.value, usernameInput.value, passwordInput.value);
+    const result = signUp(emailInput.value, usernameInput.value, passwordInput.value);
+    result.then((data)=>{console.log(data)});
 }   
     )

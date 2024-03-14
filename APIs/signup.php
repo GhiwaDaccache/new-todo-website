@@ -6,8 +6,8 @@ $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$check_count = $mysqli->prepare('select count(*) from users where email=?');
-$check_count->bind_param('s', $email);
+$check_count = $mysqli->prepare('select count(*) from users where email=? or username=?');
+$check_count->bind_param('ss', $email, $username);
 $check_count->execute();
 $check_count->store_result();
 
@@ -19,6 +19,8 @@ if($count == 0){
     $query = $mysqli->prepare('insert into users (email, username, password) values(?,?,?)');
     $query->bind_param('sss', $email, $username, $hashed_password);
     $query->execute();
+    $last_id = $mysqli->insert_id;
+    $response['user_id'] = $last_id;
     $response['status'] = "success";
     $response['message'] = "user $username was created";
 }else{
