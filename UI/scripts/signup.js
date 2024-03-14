@@ -1,3 +1,9 @@
+const emailInput = document.getElementById("email");
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
+const signUpBtn = document.getElementById("signup-btn");
+
+
 const signUp = async (email, username, password) => {
     const formData = new FormData();
         formData.append('email', email);
@@ -29,13 +35,7 @@ const signUp = async (email, username, password) => {
   };
   
 
-const emailInput = document.getElementById("email");
-const usernameInput = document.getElementById("username");
-const passwordInput = document.getElementById("password");
-const signUpBtn = document.getElementById("signup-btn");
-
 signUpBtn.addEventListener('click', () => {
     const result = signUp(emailInput.value, usernameInput.value, passwordInput.value);
     result.then((data)=>{console.log(data)});
-}   
-    )
+});
