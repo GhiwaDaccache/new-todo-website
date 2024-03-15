@@ -17,10 +17,9 @@ const login = async (userInput, passwordInput) => {
                 }
             }
             );
-            console.log(result.data.status)
         if (result.data.status == "logged in")
         {
-            window.location.href = `../UI/pages/todo.html?user_id=${result.data.user_id}`;
+            window.location.href = `../pages/todo.html.?user_id=${result.data.user_id}`;
         }
         else
         {
