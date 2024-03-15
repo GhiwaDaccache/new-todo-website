@@ -18,16 +18,21 @@ axios.get(`http://localhost/new-todo-website/APIs/read.php?user_id=${paramValue}
     choresTodo.innerHTML = "";
 
     personal.forEach(element => {
-        personalTodo.innerHTML += `<div class="card-header primary-bg"></div>
-                                    <div class="flex align-center full-w">
+        personalTodo.innerHTML += `<div class="flex align-center full-w">
                                     <i class="fa-regular fa-square-check"></i>
                                     <p>${element.description}</p>
                                 </div>`
     });
 
     professional.forEach(element => {
-        todoCard.innerHTML += `<div class="card-header primary-bg"></div>
-                                    <div class="flex align-center full-w">
+      professionalTodo.innerHTML += `<div class="flex align-center full-w">
+                                    <i class="fa-regular fa-square-check"></i>
+                                    <p>${element.description}</p>
+                                </div>`
+    });
+
+    chores.forEach(element => {
+      choresTodo.innerHTML += `<div class="flex align-center full-w">
                                     <i class="fa-regular fa-square-check"></i>
                                     <p>${element.description}</p>
                                 </div>`

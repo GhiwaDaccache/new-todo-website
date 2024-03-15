@@ -39,37 +39,40 @@
 
         <div class="shadow flex align-center column" >
             <h4>Personal</h4>
+            <div class="card-header primary-bg"></div>
             <div id="personal"></div>
             <div class="card-footer flex align-center primary-bg shadow">
                 <i class="fa-regular fa-trash-can white-text"></i>
-                <i class="fa-regular fa-plus white-text"></i>
+                <i class="fa-regular fa-plus white-text" id="personal-add"></i>
             </div>
         </div>
 
         <div class="shadow flex align-center column">
             <h4>Professional</h4>
+            <div class="card-header primary-bg"></div>
             <div id="professional"></div>
             <div class="card-footer flex align-center primary-bg shadow">
                 <i class="fa-regular fa-trash-can white-text"></i>
-                <i class="fa-regular fa-plus white-text"></i>
+                <i class="fa-regular fa-plus white-text" id="professional-add"></i>
             </div>
         </div>
 
         <div class="shadow flex align-center column">
             <h4>Chores</h4>
+            <div class="card-header primary-bg"></div>
             <div id="chores"></div>
             <div class="card-footer flex align-center primary-bg shadow">
                 <i class="fa-regular fa-trash-can white-text"></i>
-                <i class="fa-regular fa-plus white-text"></i>
+                <i class="fa-regular fa-plus white-text" id="chores-add"></i>
 
             </div>
         </div>
 
-        <form class="pop-up gap flex column align-center hidden">
+        <form class="pop-up gap flex column align-center hidden" id="popup">
             <label for="task-name">Task</label><br>
-            <input type="text" name="task-name"><br>
+            <input type="text" name="task-name" id="description-add"><br>
             <div class="flex gap">
-                <button class="btn">Add</button>
+                <button class="btn" id="todo-add">Add</button>
                 <button class="btn">Cancel</button>
             </div>
         </form>
@@ -80,5 +83,6 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../scripts/read.js"></script>
+    <script src="../scripts/create.js"></script>
 </body>
 </html>

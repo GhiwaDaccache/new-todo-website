@@ -11,5 +11,5 @@ $create_todo->execute();
 $create_todo->store_result();
 
 $response['status'] = "success";
-
+$response['user_id'] = $user_id;
 echo json_encode($response);
