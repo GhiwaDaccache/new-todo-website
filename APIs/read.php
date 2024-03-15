@@ -23,4 +23,6 @@ while ($load_todos->fetch()) {
 $response['status'] = 'success';
 $response['todos'] = $todos;
 
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
 echo json_encode($response);

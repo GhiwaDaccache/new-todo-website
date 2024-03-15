@@ -54,7 +54,7 @@ choresAdd.addEventListener('click', () => {
 })
 
 todoAdd.addEventListener('click', ()=>{
-    const result = createTodo(addDescription.value);
+    createTodo(addDescription.value);
 })
 
 

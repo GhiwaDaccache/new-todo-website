@@ -28,4 +28,6 @@ if($count == 0){
     $response['message'] = "user $username already exists";
 }
 
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
 echo json_encode($response);

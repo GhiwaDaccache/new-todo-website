@@ -12,4 +12,7 @@ $create_todo->store_result();
 
 $response['status'] = "success";
 $response['user_id'] = $user_id;
+
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
 echo json_encode($response);
