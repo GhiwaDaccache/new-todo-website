@@ -12,9 +12,6 @@ $query->bind_result($id, $hashed_password);
 $query->fetch();
 $num_rows = $query->num_rows();
 
-echo $hashed_password;
-echo $num_rows;
-
 
 if($num_rows == 0){
     $response['status'] = "failed";
