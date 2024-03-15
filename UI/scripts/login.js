@@ -2,10 +2,10 @@ const userInput = document.getElementById("email-login");
 const passwordInput = document.getElementById("password-login");
 const loginBtn = document.getElementById("login-btn");
 
-const login = async (userInput, password) => {
+const login = async (userInput, passwordInput) => {
     const formData = new FormData();
         formData.append('user_input', userInput);
-        formData.append('password', password);
+        formData.append('password', passwordInput);
 
     try {
         const result = await axios.post(
@@ -18,7 +18,7 @@ const login = async (userInput, password) => {
             }
             );
             console.log(result.data.status)
-        if (result.data.status == "success")
+        if (result.data.status == "logged in")
         {
             window.location.href = `../UI/pages/todo.html?user_id=${result.data.user_id}`;
         }
