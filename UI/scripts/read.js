@@ -6,6 +6,7 @@ const choresTodo = document.getElementById('chores');
 
 
 
+
 axios.get(`http://localhost/new-todo-website/APIs/read.php?user_id=${paramValue}`)
   .then(response => {
     
@@ -38,8 +39,24 @@ axios.get(`http://localhost/new-todo-website/APIs/read.php?user_id=${paramValue}
                                 </div>`
     });
 
+    const regularIcons = document.querySelectorAll('.fa-regular');
+    regularIcons.forEach(icon => {
+      icon.addEventListener('click', function () {  
+
+        if (icon.classList.contains('fa-regular')) {
+          icon.classList.replace('fa-regular', 'fa-solid');
+        } else {
+          icon.classList.replace('fa-solid', 'fa-regular'); 
+        }         
+        const taskName = icon.nextElementSibling;
+        taskName.style.textDecoration = taskName.style.textDecoration === 'line-through' ? 'none' : 'line-through';
+
+            });
+        })
+
   })
   .catch(error => {
     console.error('Error:', error);
   });
+
 
